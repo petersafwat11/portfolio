@@ -68,6 +68,7 @@ const Contact = () => {
              ){
              setSendForm(true)
          }
+    
     },[state]);
     const modalhandeler= ()=>{
         setModal(true);
@@ -84,7 +85,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='w-full lg:h-screen '>
-        {`${modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div>}` }
+        {modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div> }
         <div className='max-w-[1240px] mx-auto px-2 py-16 -w-full'>
             <p className='tracking-widdest uppercase text-xl text-[#5651e5]'>Contact</p>
             <h2 className='py-4'>Get in Touch</h2>
@@ -103,28 +104,22 @@ const Contact = () => {
                         CONNECT WITH ME
                         </div>
                         <div className='flex items-center justify-between my-6 w-[65%] mx-auto'>
-                        <Link  href='https://www.linkedin.com/in/peter-safwat-frontend' >
-                            <a target='_blank' >
+                            <a href='https://www.linkedin.com/in/peter-safwat-frontend' target='_blank' >
                             <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                             <FaLinkedinIn/>
                             </div>
                             </a>
-                        </Link>
 
-                        <Link  href='https://github.com/petersafwat11' >
-                            <a target='_blank' >
+                            <a href='https://github.com/petersafwat11' target='_blank' >
                             <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                             <FaGithub/>
                             </div>
                             </a>
-                        </Link>
-                        <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' >
-                            <a target='_blank' >
+                            <a href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' target='_blank'  >
                             <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                             <AiOutlineMail/>
                             </div>
                             </a>
-                        </Link>  
                        </div>
                     </div>
                     <div className='lg:col-span-3 text-gray-600 flex flex-col shadow-2xl shadow-gray-400 rounded-lg bg-gray-200'>

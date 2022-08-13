@@ -101,25 +101,19 @@ const Header = () => {
               </div>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
-                  <Link  href='https://www.linkedin.com/in/peter-safwat-frontend/' >
-                        <a target='_blank'>
+                        <a href='https://www.linkedin.com/in/peter-safwat-frontend/' target='_blank'>
                         <FaLinkedinIn/>
                         </a>
-                  </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
-                    <Link  href='https://github.com/petersafwat11' >
-                        <a target='_blank'>
+                        <a href='https://github.com/petersafwat11' target='_blank'>
                         <FaGithub/>                  
                         </a>
-                    </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
-                    <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' >
-                        <a target='_blank'>
+                        <a href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' target='_blank'>
                         <AiOutlineMail/>
                         </a>
-                    </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
                   <Link  href='#contact'>

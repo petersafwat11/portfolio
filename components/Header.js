@@ -8,7 +8,7 @@ const Header = () => {
 
   const [nav, setNav] = useState(false)
   const navHandeler = ()=>{
-    setNav(!nav);
+    setNav( (nav)=>{!nav});
   }
   const [shadow, setShadow] = useState(false);
   useEffect(()=>{
@@ -21,7 +21,7 @@ const Header = () => {
            }
      }
      window.addEventListener('scroll', shadowHandeler);
-  },[])
+  },[shadow])
 
   return (
         <div >

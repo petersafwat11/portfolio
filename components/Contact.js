@@ -74,9 +74,9 @@ const Contact = () => {
     const modalhandeler= ()=>{
         setModal(true);
         setTimeout(()=>{
-            setModal(false)
-            router.push('/')
-        },1500)
+            setModal(false);
+            router.push('/');
+        },1500);
     }
     const submitForm = (e)=>{
         e.preventDefault();

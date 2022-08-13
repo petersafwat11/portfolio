@@ -14,10 +14,10 @@ const Header = () => {
   useEffect(()=>{
      const shadowHandeler= ()=>{
            if(window.scrollY>= 90){
-                 setShadow(true)
+                 setShadow(true);
            }
            else{
-                 setShadow(false)
+                 setShadow(false);
            }
      }
      window.addEventListener('scroll', shadowHandeler);

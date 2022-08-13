@@ -40,9 +40,6 @@ const Contact = () => {
     const [modal, setModal] = useState(false);
     const [sendForm, setSendForm] = useState(false);
     const router =useRouter();
-    const topHandeler=()=>{
-        window.scrollY
-    }
     const initialState = {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} }
     const [state, dispatchState] = useReducer(reducerFunc ,initialState) 
     const nameHandeler = (e)=>{
@@ -165,7 +162,7 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <div onClick={topHandeler} className='text-[#5651e5] mx-auto py-4 p-3 rounded-full shadow-xl border-1 border-gray-200 my-4 lg:my-8'>
+                <div className='text-[#5651e5] mx-auto py-4 p-3 rounded-full shadow-xl border-1 border-gray-200 my-4 lg:my-8'>
                     <Link href='#main'>
                     <HiOutlineChevronDoubleUp className='cursor-pointer ' size={30}/>
                     </Link>

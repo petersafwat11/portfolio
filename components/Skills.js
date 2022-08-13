@@ -10,9 +10,6 @@ import nextJs from '../public/assets/nextjs.png'
 import Tailwind from '../public/assets/tailwind.png'
 
 const Skills = () => {
-    const skills = [Html, Css, Firebase, Github, ReactJs, Js, nextJs, Tailwind]
-    console.log(skills)
-    const skillsNames = ['html', 'css', 'firebase', 'github', 'reactJs', 'javascript', 'nextjs', 'tailwind']
   return (
     <div id='skills' className='w-full mt-96 pt-60 lg:my-8 lg:p-2 text-gray-600 '>
         <div className='max-w-[1240] mx-auto flex flex-col justify-center h-full '>

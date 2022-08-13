@@ -68,7 +68,6 @@ const Contact = () => {
              ){
              setSendForm(true)
          }
-    
     },[state]);
     const modalhandeler= ()=>{
         setModal(true);
@@ -85,7 +84,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='w-full lg:h-screen '>
-        {modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div>}
+        {`${modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div>}` }
         <div className='max-w-[1240px] mx-auto px-2 py-16 -w-full'>
             <p className='tracking-widdest uppercase text-xl text-[#5651e5]'>Contact</p>
             <h2 className='py-4'>Get in Touch</h2>

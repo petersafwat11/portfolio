@@ -21,7 +21,7 @@ const Header = () => {
            }
      }
      window.addEventListener('scroll', shadowHandeler);
-  },[shadow])
+  },[])
 
   return (
         <div >
@@ -51,9 +51,9 @@ const Header = () => {
               <AiOutlineMenu className='inline-block lg:hidden mt-2 cursor-pointer' size={25} onClick={navHandeler}></AiOutlineMenu>
             </div>
           </div>  
-          <div className={nav&& ' z-50 w-full h-screen left-0 top-0 fixed bg-black/70 lg:hidden' }>
-             <div className={nav? 'z-100 fixed top-0 left-0 w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' :
-             'z-100 fixed top-0 left-[-100%] w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' }>
+          <div className={`${nav&& ' z-50 w-full h-screen left-0 top-0 fixed bg-black/70 lg:hidden'}` }>
+             <div className={`${nav? 'z-100 fixed top-0 left-0 w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' :
+             'z-100 fixed top-0 left-[-100%] w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' }`}>
               <div className='flex justify-between items-center'>
                 <h1 className=''>PS</h1>
                 <div onClick={navHandeler} className='rounded-full shadow-lg shadow-gray-400 p-4 text-sm cursor-pointer'>

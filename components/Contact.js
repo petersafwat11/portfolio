@@ -33,7 +33,7 @@ const reducerFunc = (state, action)=>{
         return {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} };
     }
 
-return initialState;
+return  {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} };
 }
 const Contact = () => {
     const [modal, setModal] = useState(false);

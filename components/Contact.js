@@ -3,6 +3,7 @@ import contact from '../public/assets/contact.jpg'
 import Image from 'next/image'
 import { AiOutlineMail} from 'react-icons/ai';
 import {FaLinkedinIn, FaGithub} from 'react-icons/fa';
+import {RiContactsFill} from 'react-icons/ri'
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
 import Link from 'next/link';
 import { useEffect,useState, useReducer } from 'react';
@@ -33,12 +34,15 @@ const reducerFunc = (state, action)=>{
         return {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} };
     }
 
-return  {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} };
+return initialState;
 }
 const Contact = () => {
     const [modal, setModal] = useState(false);
     const [sendForm, setSendForm] = useState(false);
     const router =useRouter();
+    const topHandeler=()=>{
+        window.scrollY
+    }
     const initialState = {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} }
     const [state, dispatchState] = useReducer(reducerFunc ,initialState) 
     const nameHandeler = (e)=>{
@@ -73,19 +77,18 @@ const Contact = () => {
     const modalhandeler= ()=>{
         setModal(true);
         setTimeout(()=>{
-            setModal(false);
-            router.push('/');
-        },1500);
+            setModal(false)
+            router.push('/')
+        },1500)
     }
     const submitForm = (e)=>{
         e.preventDefault();
         modalhandeler();
         dispatchState({type: 'CLEARDATA'})
     } 
-
   return (
     <div id='contact' className='w-full lg:h-screen '>
-        {modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div> }
+        {modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div>}
         <div className='max-w-[1240px] mx-auto px-2 py-16 -w-full'>
             <p className='tracking-widdest uppercase text-xl text-[#5651e5]'>Contact</p>
             <h2 className='py-4'>Get in Touch</h2>
@@ -104,22 +107,22 @@ const Contact = () => {
                         CONNECT WITH ME
                         </div>
                         <div className='flex items-center justify-between my-6 w-[65%] mx-auto'>
-                            <a href='https://www.linkedin.com/in/peter-safwat-frontend' target='_blank' >
+                        <Link  href='https://www.linkedin.com/in/peter-safwat-frontend' >
                             <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                             <FaLinkedinIn/>
                             </div>
-                            </a>
+                        </Link>
 
-                            <a href='https://github.com/petersafwat11' target='_blank' >
+                        <Link  href='https://github.com/petersafwat11' >
                             <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                             <FaGithub/>
                             </div>
-                            </a>
-                            <a href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' target='_blank'  >
+                        </Link>
+                        <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' >
                             <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                             <AiOutlineMail/>
                             </div>
-                            </a>
+                        </Link>  
                        </div>
                     </div>
                     <div className='lg:col-span-3 text-gray-600 flex flex-col shadow-2xl shadow-gray-400 rounded-lg bg-gray-200'>
@@ -156,7 +159,7 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <div className='text-[#5651e5] mx-auto py-4 p-3 rounded-full shadow-xl border-1 border-gray-200 my-4 lg:my-8'>
+                <div onClick={topHandeler} className='text-[#5651e5] mx-auto py-4 p-3 rounded-full shadow-xl border-1 border-gray-200 my-4 lg:my-8'>
                     <Link href='#main'>
                     <HiOutlineChevronDoubleUp className='cursor-pointer ' size={30}/>
                     </Link>

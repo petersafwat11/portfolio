@@ -8,7 +8,7 @@ const Header = () => {
 
   const [nav, setNav] = useState(false)
   const navHandeler = ()=>{
-    setNav( (nav)=>{!nav});
+    setNav( ()=>{!nav});
   }
   const [shadow, setShadow] = useState(false);
   useEffect(()=>{
@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
         <div >
-          <div className={`fixed w-full h-20 z-10  ${shadow&& 'bg-gray-200 shadow-xl'} `} >
+          <div className={`fixed w-full h-20 z-10  ${shadow? 'bg-gray-200 shadow-xl': '' } `} >
             <div className='flex items-center justify-between px-3'>
               <h1 className=' font-extrabold tracking-widest mt-2 '>PS</h1>
               <ul className='hidden lg:flex items-center justify-around w-[55%] uppercase text-sm mt-2 lg:w-[42%]'>
@@ -51,9 +51,9 @@ const Header = () => {
               <AiOutlineMenu className='inline-block lg:hidden mt-2 cursor-pointer' size={25} onClick={navHandeler}></AiOutlineMenu>
             </div>
           </div>  
-          <div className={`${nav&& ' z-50 w-full h-screen left-0 top-0 fixed bg-black/70 lg:hidden'}` }>
-             <div className={`${nav? 'z-100 fixed top-0 left-0 w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' :
-             'z-100 fixed top-0 left-[-100%] w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' }`}>
+          <div className={nav&& ' z-50 w-full h-screen left-0 top-0 fixed bg-black/70 lg:hidden' }>
+             <div className={nav? 'z-100 fixed top-0 left-0 w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' :
+             'z-100 fixed top-0 left-[-100%] w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' }>
               <div className='flex justify-between items-center'>
                 <h1 className=''>PS</h1>
                 <div onClick={navHandeler} className='rounded-full shadow-lg shadow-gray-400 p-4 text-sm cursor-pointer'>
@@ -101,19 +101,25 @@ const Header = () => {
               </div>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
-                        <a href='https://www.linkedin.com/in/peter-safwat-frontend/' target='_blank'>
+                  <Link  href='https://www.linkedin.com/in/peter-safwat-frontend/' >
+                        <a target='_blank'>
                         <FaLinkedinIn/>
                         </a>
+                  </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
-                        <a href='https://github.com/petersafwat11' target='_blank'>
+                    <Link  href='https://github.com/petersafwat11' >
+                        <a target='_blank'>
                         <FaGithub/>                  
                         </a>
+                    </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
-                        <a href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' target='_blank'>
+                    <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' >
+                        <a target='_blank'>
                         <AiOutlineMail/>
                         </a>
+                    </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
                   <Link  href='#contact'>

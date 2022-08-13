@@ -3,7 +3,6 @@ import contact from '../public/assets/contact.jpg'
 import Image from 'next/image'
 import { AiOutlineMail} from 'react-icons/ai';
 import {FaLinkedinIn, FaGithub} from 'react-icons/fa';
-import {RiContactsFill} from 'react-icons/ri'
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
 import Link from 'next/link';
 import { useEffect,useState, useReducer } from 'react';
@@ -83,6 +82,7 @@ const Contact = () => {
         modalhandeler();
         dispatchState({type: 'CLEARDATA'})
     } 
+
   return (
     <div id='contact' className='w-full lg:h-screen '>
         {modal && <div className='text-green-500 text-center z-100 fixed top-[50%] rounded-xl left-[50%] translate-x-[-50%] translate-y-[-50%] bg-gray-50 py-8 px-4 ' >your request has been sent successfuly<br/> i will reach you soon. </div>}

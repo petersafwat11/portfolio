@@ -100,7 +100,7 @@ const Contact = () => {
                         <div className='pt-4 w-[90%] mx-auto'>
                             <h2 className='tracking-wider text-black'>Peter Safwat</h2>
                             <p className='text-sm tracking-wider '>Front-End Developer</p>
-                            <p>I am available for freelance or full-time positions. Contact me and let's talk.</p>
+                            <p>I am available for freelance or full-time positions. Contact me and let&apos;s talk.</p>
                         </div>
                         <div className='uppercase tracking-widest mt-8 w-[90%] mx-auto'>
                         CONNECT WITH ME

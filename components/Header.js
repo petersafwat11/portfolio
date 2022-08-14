@@ -61,7 +61,7 @@ const Header = () => {
                 </div>
               </div>
               <p className='w-[85] w-sm:[90] border-b border-gray-300 my-4 pb-2'>
-                let's build something legendary together
+                let&apos;s build something legendary together
               </p>
               <ul className='flex flex-col items-start justify-around  uppercase text-sm mt-8 h-52'>
               <Link  href='#main'>
@@ -97,7 +97,7 @@ const Header = () => {
 
               </ul>
               <div className='mt-12'>
-                <p className='tracking-widest uppercase text-[#5651e5]'>let's connect</p>
+                <p className='tracking-widest uppercase text-[#5651e5]'>let&apos;s connect</p>
               </div>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>

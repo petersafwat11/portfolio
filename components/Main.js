@@ -10,10 +10,10 @@ const Main = () => {
     <div id='main' className='w-full h-screen text-center' >
         <div className='w-full h-full max-w-[1240px] mx-auto flex items-center justify-center p-2'>
             <div>
-            <p className='tracking-widest py-2 text-sm text-gray-600 uppercase' >LET'S BUILD SOMETHING legendary TOGETHER</p>
-            <h2 className='text-gray-700 font-black'>Hi, I'm <span className='text-[#5651e5] my-6'>Peter</span> <br/>
+            <p className='tracking-widest py-2 text-sm text-gray-600 uppercase' >LET&apos;S BUILD SOMETHING legendary TOGETHER</p>
+            <h2 className='text-gray-700 font-black'>Hi, I&apos;m <span className='text-[#5651e5] my-6'>Peter</span> <br/>
              A Front-End Web Developer</h2>
-            <p className='py-2 max-w-[75%] mx-auto text-gray-600'>I’m focused on building responsive front-end web applications while learning back-end technologies.</p>
+            <p className='py-2 max-w-[75%] mx-auto text-gray-600'>I&apos;m focused on building responsive front-end web applications while learning back-end technologies.</p>
             <div className='flex items-center justify-between my-4 w-[50%] mx-auto'>
             <Link  href='https://www.linkedin.com/in/peter-safwat-frontend/' >
                         <a target='_blank'>

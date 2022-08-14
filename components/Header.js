@@ -42,7 +42,11 @@ const Header = () => {
                   <Link className='hover:border-b ' href='#projects'>Projects</Link>
                 </li>
                 <li>
-                  <Link className='hover:border-b ' href='#'>Resume</Link>
+                  <Link className='hover:border-b ' href='https://1drv.ms/b/s!AqqyHckjhyYYwBQuRqTN54YFUzbs?e=zcfztj'>
+                    <a target='_blank' >
+                    Resume
+                    </a>
+                  </Link>
                 </li>
                 <li>
                   <Link className='hover:border-b' href='#contact'>Contact</Link>
@@ -84,7 +88,7 @@ const Header = () => {
                     Projects
                   </li>
                 </Link>
-                <Link  href='#'>
+                <Link  href='https://1drv.ms/b/s!AqqyHckjhyYYwBQuRqTN54YFUzbs?e=zcfztj'>
                   <li onClick={navHandeler} className='hover:border-b w-full hover:bg-gray-400 p-3'>
                     Resume
                   </li>

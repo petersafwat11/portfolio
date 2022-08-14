@@ -10,7 +10,7 @@ const Projects = () => {
     const {projects} = context; 
     return (
     projects.map(pro=>(
-        <div id='projects' className='w-full'>
+        <div key={pro.name} id='projects' className='w-full'>
             <div className='px-2 py-16 w-[1240] mx-auto'>
                 <p className='text-xl tracking-widest text-[#5651e5] '>Projects</p>
                 <h2 className='py-4'>what i have built</h2>

@@ -12,7 +12,7 @@ const Project = () => {
   const {projects} = context; 
 
  return (
-  projects.map((project)=>(<OneProject project={project}/>))
+  projects.map((project)=>(<OneProject key={project.name} project={project}/>))
   );
 };
 

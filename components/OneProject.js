@@ -5,9 +5,8 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 const OneProject = ({project}) => {
-   console.log(project);
     return (
-        <div className='w-full'>
+        <div key={project.name} className='w-full'>
           <div className='w-screen h-[50vh] relative'>
             <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
              <Image
@@ -19,7 +18,7 @@ const OneProject = ({project}) => {
             /> 
             <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
               <h2 className='py-2'>{project.name}</h2>
-              <h3>{project.technology.map((tech)=>(<span>
+              <h3>{project.technology.map((tech)=>(<span key={Math.floor(Math.random()*600000)}>
                 {tech+'/'}
               </span> ))}</h3>
             </div>
@@ -51,7 +50,7 @@ const OneProject = ({project}) => {
               <div className='p-2'>
                 <p className='text-center font-bold pb-2'>Technologies</p>
                 <div className='grid grid-cols-3 md:grid-cols-1'>
-                  {project.allTechnologies.map((tech)=>(        <p className='text-gray-600 py-2 flex items-center'>
+                  {project.allTechnologies.map((tech)=>(        <p key={Math.floor(Math.random()*600000)} className='text-gray-600 py-2 flex items-center'>
                     <RiRadioButtonFill className='pr-1' /> {tech}
                   </p>
                   ))}

@@ -3,7 +3,6 @@ import contact from '../public/assets/contact.jpg'
 import Image from 'next/image'
 import { AiOutlineMail} from 'react-icons/ai';
 import {FaLinkedinIn, FaGithub} from 'react-icons/fa';
-import {RiContactsFill} from 'react-icons/ri'
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
 import Link from 'next/link';
 import { useEffect,useState, useReducer } from 'react';
@@ -37,13 +36,13 @@ const reducerFunc = (state, action)=>{
 return initialState;
 }
 const Contact = () => {
+    const topHandeler = ()=>{
+        window.scrollTo(0,0);
+    }
     const [modal, setModal] = useState(false);
     const [sendForm, setSendForm] = useState(false);
     const router =useRouter();
-    const topHandeler=()=>{
-        window.scrollY
-    }
-    const initialState = {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} }
+    const initialState = {name : {entered : '', valid: false} , phone : {entered : '', valid: false}, email : {entered : '', valid: false}, subject : {entered : '', valid: false}, message : {entered : '', valid: false} };
     const [state, dispatchState] = useReducer(reducerFunc ,initialState) 
     const nameHandeler = (e)=>{
         dispatchState({type: 'NAME', value: e.target.value})
@@ -107,22 +106,28 @@ const Contact = () => {
                         CONNECT WITH ME
                         </div>
                         <div className='flex items-center justify-between my-6 w-[65%] mx-auto'>
-                        <Link  href='https://www.linkedin.com/in/peter-safwat-frontend' >
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
+                            <Link  href='https://www.linkedin.com/in/peter-safwat-frontend/'passHref >
+                            <a target='_blank'>
                             <FaLinkedinIn/>
-                            </div>
-                        </Link>
+                            </a>
+                            </Link>
+                        </div>
 
-                        <Link  href='https://github.com/petersafwat11' >
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
-                            <FaGithub/>
-                            </div>
-                        </Link>
-                        <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' >
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
+                            <Link  href='https://github.com/petersafwat11' >
+                            <a target='_blank'>
+                            <FaGithub/>                  
+                            </a>
+                            </Link>
+                        </div>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 '>
+                            <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new'  >
+                            <a target='_blank'>
                             <AiOutlineMail/>
-                            </div>
-                        </Link>  
+                            </a>
+                            </Link>
+                        </div>
                        </div>
                     </div>
                     <div className='lg:col-span-3 text-gray-600 flex flex-col shadow-2xl shadow-gray-400 rounded-lg bg-gray-200'>
@@ -159,10 +164,8 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <div onClick={topHandeler} className='text-[#5651e5] mx-auto py-4 p-3 rounded-full shadow-xl border-1 border-gray-200 my-4 lg:my-8'>
-                    <Link href='#main'>
-                    <HiOutlineChevronDoubleUp className='cursor-pointer ' size={30}/>
-                    </Link>
+                <div  className='text-[#5651e5] mx-auto py-4 p-3 rounded-full shadow-xl border-1 border-gray-200 my-4 lg:my-8'>
+                    <HiOutlineChevronDoubleUp onClick={topHandeler} className='cursor-pointer ' size={30}/>
                 </div>
             </div>
         </div>

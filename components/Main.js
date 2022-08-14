@@ -16,27 +16,35 @@ const Main = () => {
             <p className='py-2 max-w-[75%] mx-auto text-gray-600'>I’m focused on building responsive front-end web applications while learning back-end technologies.</p>
             <div className='flex items-center justify-between my-4 w-[50%] mx-auto'>
             <Link  href='https://www.linkedin.com/in/peter-safwat-frontend/' >
+                        <a target='_blank'>
                               <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                               <FaLinkedinIn/>
                               </div>
+                        </a>         
            </Link>
 
            <Link  href='https://github.com/petersafwat11' >
+                        <a target='_blank'>
                               <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                               <FaGithub/>  
                               </div>                
+                        </a>
             </Link>
 
             <Link  href='https://mail.google.com/mail/u/0/#search/psafwat16%40gmail.com?compose=new' >
+                        <a target='_blank' >
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                         <AiOutlineMail/>
                         </div>
+                        </a>
             </Link>
             
             <Link  href='#contact'>
+                  <a>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300 '>
                   <RiContactsFill/>
                   </div>
+                  </a>
             </Link>
       </div>
 
